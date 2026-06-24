@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shipper – Logistics & Cargo</title>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="preload" href="..." as="script">
+  
  <style>
     /* ===== RESET ===== */
 *,
@@ -1030,7 +1030,22 @@ blockquote {
     align-items: center;
   }
 }
- </style>
+ 
+.menu-toggle-checkbox{display:none;}
+.menu-btn{display:none;}
+@media (max-width:768px){
+.menu-btn{
+display:block;
+color:white;
+font-size:28px;
+cursor:pointer;
+}
+.menu-toggle-checkbox:checked ~ .nav-links{
+display:flex;
+}
+}
+
+</style>
 </head>
 <body>
 
@@ -1436,15 +1451,5 @@ counters.forEach(counter => {
     </div>
   </div>
 </footer>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-  
-</script>
 </body>
 </html>
-
